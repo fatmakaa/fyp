@@ -1,0 +1,67 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Topic {
+  id       Int       @id @default(autoincrement())
+  question String
+  category String
+
+  opinions Opinion[]
+}
+
+model Scholar {
+  id      Int    @id @default(autoincrement())
+  name    String
+  school  String
+
+  opinions Opinion[]
+}
+
+model Opinion {
+  id               Int    @id @default(autoincrement())
+  ruling           String
+  reasoning        String
+  methodologyNote  String
+  verificationStatus String
+
+  topicId   Int
+  scholarId Int
+
+  topic   Topic   @relation(fields: [topicId], references: [id])
+  scholar Scholar @relation(fields: [scholarId], references: [id])
+
+  sources            Source[]
+  evidenceReferences EvidenceReference[]
+}
+
+model Source {
+  id        Int    @id @default(autoincrement())
+  reference String
+
+  opinionId Int
+  opinion   Opinion @relation(fields: [opinionId], references: [id])
+}
+
+model EvidenceReference {
+  id          Int    @id @default(autoincrement())
+  type        String
+  title       String
+  description String
+  url         String
+
+  opinionId Int
+  opinion   Opinion @relation(fields: [opinionId], references: [id])
+}
+
+model SubmittedQuestion {
+  id        Int      @id @default(autoincrement())
+  question  String
+  status    String
+  createdAt DateTime @default(now())
+}
