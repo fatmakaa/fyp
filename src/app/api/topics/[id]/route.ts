@@ -22,7 +22,7 @@ export async function GET(
        include: {
          scholar: true,
          sources: true,
-
+         evidenceReferences: true,
        },
      },
    },
