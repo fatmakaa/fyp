@@ -14,6 +14,9 @@ export default async function Home() {
 
   const topics: Topic[] = await response.json();
 
+// response.json() converts the API response into JavaScript data
+// Topic[] tells TypeScript that the data should be an array of Topic objects
+
   return (
     <main className="min-h-screen bg-gray-50">
 
@@ -79,8 +82,8 @@ export default async function Home() {
 
           {topics.map((topic) => (
             <Link
-              key={topic.id}
-              href={`/topics/${topic.id}`}
+              key={topic.id}  //key gives React a unique identifier for each item in the list, allowing React to efficiently keep track of the rendered elements
+              href={`/topics/${topic.id}`}  //href creates a dynamic link to the topic’s detail page. The topic ID is inserted into the URL, so each topic links to its corresponding comparison page
               className="rounded-lg border bg-white p-6 shadow-sm transition hover:shadow-md"
             >
               <h3 className="text-xl font-semibold">
