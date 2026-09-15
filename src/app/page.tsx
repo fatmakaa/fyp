@@ -14,16 +14,13 @@ export default async function Home() {
 
   const topics: Topic[] = await response.json();
 
-// response.json() converts the API response into JavaScript data
-// Topic[] tells TypeScript that the data should be an array of Topic objects
-
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-gray-50 text-gray-900">
 
       {/* Header */}
       <section className="border-b bg-white">
         <div className="mx-auto max-w-5xl px-8 py-16">
-          <h1 className="text-4xl font-bold">
+          <h1 className="text-4xl font-bold text-gray-900">
             Islamic Legal Information System
           </h1>
 
@@ -36,34 +33,37 @@ export default async function Home() {
 
       {/* How it works */}
       <section className="mx-auto max-w-5xl px-8 py-12">
-        <h2 className="text-2xl font-semibold">
+        <h2 className="text-2xl font-semibold text-gray-900">
           How It Works
         </h2>
 
         <div className="mt-6 grid gap-6 md:grid-cols-3">
 
           <div className="rounded-lg border bg-white p-6">
-            <h3 className="text-lg font-semibold">
+            <h3 className="text-lg font-semibold text-gray-900">
               1. Choose a Topic
             </h3>
+
             <p className="mt-2 text-gray-600">
               Select an Islamic legal question from the available topics.
             </p>
           </div>
 
           <div className="rounded-lg border bg-white p-6">
-            <h3 className="text-lg font-semibold">
+            <h3 className="text-lg font-semibold text-gray-900">
               2. Compare Opinions
             </h3>
+
             <p className="mt-2 text-gray-600">
               View the opinions of the four Sunni schools of thought side by side.
             </p>
           </div>
 
           <div className="rounded-lg border bg-white p-6">
-            <h3 className="text-lg font-semibold">
+            <h3 className="text-lg font-semibold text-gray-900">
               3. Review Sources
             </h3>
+
             <p className="mt-2 text-gray-600">
               Explore the sources and evidence associated with each opinion.
             </p>
@@ -74,7 +74,7 @@ export default async function Home() {
 
       {/* Topics */}
       <section className="mx-auto max-w-5xl px-8 pb-12">
-        <h2 className="text-2xl font-semibold">
+        <h2 className="text-2xl font-semibold text-gray-900">
           Available Topics
         </h2>
 
@@ -82,11 +82,11 @@ export default async function Home() {
 
           {topics.map((topic) => (
             <Link
-              key={topic.id}  //key gives React a unique identifier for each item in the list, allowing React to efficiently keep track of the rendered elements
-              href={`/topics/${topic.id}`}  //href creates a dynamic link to the topic’s detail page. The topic ID is inserted into the URL, so each topic links to its corresponding comparison page
+              key={topic.id}
+              href={`/topics/${topic.id}`}
               className="rounded-lg border bg-white p-6 shadow-sm transition hover:shadow-md"
             >
-              <h3 className="text-xl font-semibold">
+              <h3 className="text-xl font-semibold text-gray-900">
                 {topic.question}
               </h3>
 
@@ -94,7 +94,7 @@ export default async function Home() {
                 Category: {topic.category}
               </p>
 
-              <p className="mt-4 font-medium">
+              <p className="mt-4 font-medium text-gray-900">
                 View comparison →
               </p>
             </Link>
@@ -103,11 +103,36 @@ export default async function Home() {
         </div>
       </section>
 
+{/* Submit a Question */}
+<section className="border-t bg-gray-50">
+  <div className="mx-auto max-w-5xl px-8 py-12">
+
+    <h2 className="text-2xl font-semibold text-gray-900">
+      Have a Question?
+    </h2>
+
+    <p className="mt-3 max-w-2xl text-gray-600">
+      Submit an Islamic legal question for review.
+    </p>
+
+    <Link
+      href="/submit-question"
+      className="mt-5 inline-block rounded-lg bg-black px-6 py-3 font-medium text-white hover:bg-gray-800"
+    >
+      Submit a Question
+    </Link>
+
+  </div>
+</section>
+
+
+
+
       {/* About the system */}
       <section className="border-t bg-white">
         <div className="mx-auto max-w-5xl px-8 py-12">
 
-          <h2 className="text-2xl font-semibold">
+          <h2 className="text-2xl font-semibold text-gray-900">
             About the System
           </h2>
 
@@ -123,7 +148,7 @@ export default async function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t">
+      <footer className="border-t bg-white">
         <div className="mx-auto max-w-5xl px-8 py-6 text-sm text-gray-500">
           Final Year Project — Islamic Legal Information System
         </div>

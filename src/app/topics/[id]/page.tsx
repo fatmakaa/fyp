@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 type Topic = {
   id: number;
   question: string;
@@ -50,97 +52,159 @@ export default async function TopicPage({
   const topic: Topic = await response.json();
 
   return (
-    <main className="min-h-screen p-8">
-      <h1 className="text-3xl font-bold">
-        {topic.question}
-      </h1>
+    <main className="min-h-screen bg-gray-50 text-gray-900 p-8">
+      <div className="mx-auto max-w-6xl">
 
-      <p className="mt-2 text-gray-600">
-        Category: {topic.category}
-      </p>
+        {/* Back to Topics */}
+        <Link
+          href="/"
+          className="text-sm font-medium text-gray-600 hover:text-gray-900"
+        >
+          ← Back to Topics
+        </Link>
 
-      <h2 className="mt-8 text-2xl font-semibold">
-        Comparison of Schools
-      </h2>
+        {/* Topic Information */}
+        <div className="mt-6">
+          <h1 className="text-4xl font-bold text-gray-900">
+            {topic.question}
+          </h1>
 
-      <div className="mt-6 grid gap-6 md:grid-cols-2">
-        {topic.opinions.map((opinion) => (
-          <section
-            key={opinion.id}
-            className="rounded-lg border p-6"
-          >
-            <h3 className="text-xl font-bold">
-              {opinion.scholar.school}
-            </h3>
+          <p className="mt-2 text-gray-600">
+            Category: {topic.category}
+          </p>
+        </div>
 
-            <div className="mt-4 space-y-3">
-              <p>
-                <strong>Ruling:</strong>{" "}
-                {opinion.ruling}
-              </p>
+        {/* Comparison Introduction */}
+        <div className="mt-10">
+          <h2 className="text-2xl font-semibold text-gray-900">
+            Comparison of Schools of Thought
+          </h2>
 
-              <p>
-                <strong>Reasoning:</strong>{" "}
-                {opinion.reasoning}
-              </p>
+          <p className="mt-2 text-gray-600">
+            The following section presents the available opinions
+            together with their scholars, sources, and evidence.
+          </p>
+        </div>
 
-              <p>
-                <strong>Methodology:</strong>{" "}
-                {opinion.methodologyNote}
-              </p>
+        {/* Comparison Cards */}
+        <div className="mt-8 grid gap-6 md:grid-cols-2">
 
-              <p>
-                <strong>Status:</strong>{" "}
-                {opinion.verificationStatus}
-              </p>
-            </div>
+          {topic.opinions.map((opinion) => (     // map() to go through each opinion and generate a comparison card dynamically.
+            <section
+              key={opinion.id}
+              className="rounded-lg border bg-white p-6 shadow-sm"
+            >
 
-            <div className="mt-6">
-              <h4 className="font-semibold">
-                Scholar
-              </h4>
+              {/* School and Scholar */}
+              <div className="border-b pb-5">
 
-              <p>{opinion.scholar.name}</p>
-            </div>
+                <h3 className="text-2xl font-bold text-gray-900">
+                  {opinion.scholar.school}
+                </h3>
 
-            <div className="mt-6">
-              <h4 className="font-semibold">
-                Sources
-              </h4>
+                <Link
+                  href={`/scholars/${opinion.scholar.id}`}
+                  className="mt-2 inline-block text-lg text-blue-600 underline hover:text-blue-800"
+                >
+                  {opinion.scholar.name}
+                </Link>
 
-              {opinion.sources.map((source) => (
-                <p key={source.id}>
-                  {source.reference}
+              </div>
+
+              {/* Ruling */}
+              <div className="mt-6">
+                <h4 className="font-semibold text-gray-900">
+                  Ruling
+                </h4>
+
+                <p className="mt-2 text-gray-700">
+                  {opinion.ruling}
                 </p>
-              ))}
-            </div>
+              </div>
 
-            <div className="mt-6">
-              <h4 className="font-semibold">
-                Evidence
-              </h4>
+              {/* Reasoning */}
+              <div className="mt-5">
+                <h4 className="font-semibold text-gray-900">
+                  Reasoning
+                </h4>
 
-              {opinion.evidenceReferences.map(
-                (evidence) => (
-                  <div
-                    key={evidence.id}
-                    className="mt-2"
-                  >
-                    <p className="font-medium">
-                      {evidence.title}
+                <p className="mt-2 text-gray-700">
+                  {opinion.reasoning}
+                </p>
+              </div>
+
+              {/* Methodology */}
+              <div className="mt-5">
+                <h4 className="font-semibold text-gray-900">
+                  Methodology
+                </h4>
+
+                <p className="mt-2 text-gray-700">
+                  {opinion.methodologyNote}
+                </p>
+              </div>
+
+              {/* Verification Status */}
+              <div className="mt-5">
+                <h4 className="font-semibold text-gray-900">
+                  Verification Status
+                </h4>
+
+                <p className="mt-2 text-gray-700">
+                  {opinion.verificationStatus}
+                </p>
+              </div>
+
+              {/* Sources */}
+              <div className="mt-6 border-t pt-5">
+                <h4 className="font-semibold text-gray-900">
+                  Sources
+                </h4>
+
+                <div className="mt-2 space-y-1">
+                  {opinion.sources.map((source) => (
+                    <p
+                      key={source.id}
+                      className="text-gray-700"
+                    >
+                      {source.reference}
                     </p>
+                  ))}
+                </div>
+              </div>
 
-                    <p>{evidence.description}</p>
+              {/* Evidence */}
+              <div className="mt-6 border-t pt-5">
+                <h4 className="font-semibold text-gray-900">
+                  Evidence
+                </h4>
 
-                    <p className="text-sm text-gray-600">
-                      Type: {evidence.type}
-                    </p>
-                  </div>
-                )
-              )}
-            </div>
-          </section>
-        ))}
+                <div className="mt-2 space-y-3">
+                  {opinion.evidenceReferences.map((evidence) => (
+                    <div key={evidence.id}>
+
+                      <p className="font-medium text-gray-900">
+                        {evidence.title}
+                      </p>
+
+                      <p className="mt-1 text-gray-700">
+                        {evidence.description}
+                      </p>
+
+                      <p className="mt-1 text-sm text-gray-500">
+                        Type: {evidence.type}
+                      </p>
+
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+            </section>
+          ))}
+
+        </div>
+
       </div>
     </main>
   );

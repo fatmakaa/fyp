@@ -1,0 +1,61 @@
+import prisma from "@/lib/prisma";
+import QuestionActions from "./QuestionActions";
+ export default async function AdminQuestionsPage() {
+  const questions = await prisma.submittedQuestion.findMany({  // databasedeki submitted questions ları getiriyor
+
+    orderBy: {
+      createdAt: "desc",
+    },
+  });
+
+  return (
+    <main className="min-h-screen bg-gray-50 p-8 text-gray-900">
+      <div className="mx-auto max-w-5xl">
+
+        <h1 className="text-3xl font-bold">
+          Submitted Questions
+        </h1>
+
+        <p className="mt-2 text-gray-600">
+          Review questions submitted by users.
+        </p>
+
+        <div className="mt-8 space-y-4">
+
+          {questions.map((question) => (
+            <div
+              key={question.id}
+              className="rounded-lg border bg-white p-6 shadow-sm"
+            >
+              <p className="text-lg font-medium">
+                {question.question}
+              </p>
+
+              <p className="mt-3 text-sm text-gray-600">
+                Status: {question.status}
+              </p>
+
+           <QuestionActions questionId={question.id} />
+
+
+              <p className="mt-1 text-sm text-gray-500">
+                Submitted:{" "}
+                {question.createdAt.toLocaleString()}
+              </p>
+            </div>
+          ))}
+
+        </div>
+
+      </div>
+    </main>
+  );
+}
+
+
+
+//basically bu page database de bulunan submitted questionsları admine gösterir.
+//adminin gördüğü sayfa
+
+
+
