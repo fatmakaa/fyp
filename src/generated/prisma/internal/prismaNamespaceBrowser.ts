@@ -87,7 +87,8 @@ export type TopicScalarFieldEnum = (typeof TopicScalarFieldEnum)[keyof typeof To
 export const ScholarScalarFieldEnum = {
   id: 'id',
   name: 'name',
-  school: 'school'
+  school: 'school',
+  biography: 'biography'
 } as const
 
 export type ScholarScalarFieldEnum = (typeof ScholarScalarFieldEnum)[keyof typeof ScholarScalarFieldEnum]

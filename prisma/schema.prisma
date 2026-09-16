@@ -16,9 +16,10 @@ model Topic {
 }
 
 model Scholar {
-  id      Int    @id @default(autoincrement())
-  name    String
-  school  String
+  id        Int    @id @default(autoincrement())
+  name      String
+  school    String
+  biography String
 
   opinions Opinion[]
 }

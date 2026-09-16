@@ -32,6 +32,7 @@ async function main() {
       data: {
         name: `Sample ${school} Scholar`,
         school: school,
+        biography: `Sample biography for the ${school} school scholar.`,
       },
     });
 

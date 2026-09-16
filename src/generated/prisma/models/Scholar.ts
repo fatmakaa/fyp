@@ -38,18 +38,21 @@ export type ScholarMinAggregateOutputType = {
   id: number | null
   name: string | null
   school: string | null
+  biography: string | null
 }
 
 export type ScholarMaxAggregateOutputType = {
   id: number | null
   name: string | null
   school: string | null
+  biography: string | null
 }
 
 export type ScholarCountAggregateOutputType = {
   id: number
   name: number
   school: number
+  biography: number
   _all: number
 }
 
@@ -66,18 +69,21 @@ export type ScholarMinAggregateInputType = {
   id?: true
   name?: true
   school?: true
+  biography?: true
 }
 
 export type ScholarMaxAggregateInputType = {
   id?: true
   name?: true
   school?: true
+  biography?: true
 }
 
 export type ScholarCountAggregateInputType = {
   id?: true
   name?: true
   school?: true
+  biography?: true
   _all?: true
 }
 
@@ -171,6 +177,7 @@ export type ScholarGroupByOutputType = {
   id: number
   name: string
   school: string
+  biography: string
   _count: ScholarCountAggregateOutputType | null
   _avg: ScholarAvgAggregateOutputType | null
   _sum: ScholarSumAggregateOutputType | null
@@ -200,6 +207,7 @@ export type ScholarWhereInput = {
   id?: Prisma.IntFilter<"Scholar"> | number
   name?: Prisma.StringFilter<"Scholar"> | string
   school?: Prisma.StringFilter<"Scholar"> | string
+  biography?: Prisma.StringFilter<"Scholar"> | string
   opinions?: Prisma.OpinionListRelationFilter
 }
 
@@ -207,6 +215,7 @@ export type ScholarOrderByWithRelationInput = {
   id?: Prisma.SortOrder
   name?: Prisma.SortOrder
   school?: Prisma.SortOrder
+  biography?: Prisma.SortOrder
   opinions?: Prisma.OpinionOrderByRelationAggregateInput
 }
 
@@ -217,6 +226,7 @@ export type ScholarWhereUniqueInput = Prisma.AtLeast<{
   NOT?: Prisma.ScholarWhereInput | Prisma.ScholarWhereInput[]
   name?: Prisma.StringFilter<"Scholar"> | string
   school?: Prisma.StringFilter<"Scholar"> | string
+  biography?: Prisma.StringFilter<"Scholar"> | string
   opinions?: Prisma.OpinionListRelationFilter
 }, "id">
 
@@ -224,6 +234,7 @@ export type ScholarOrderByWithAggregationInput = {
   id?: Prisma.SortOrder
   name?: Prisma.SortOrder
   school?: Prisma.SortOrder
+  biography?: Prisma.SortOrder
   _count?: Prisma.ScholarCountOrderByAggregateInput
   _avg?: Prisma.ScholarAvgOrderByAggregateInput
   _max?: Prisma.ScholarMaxOrderByAggregateInput
@@ -238,11 +249,13 @@ export type ScholarScalarWhereWithAggregatesInput = {
   id?: Prisma.IntWithAggregatesFilter<"Scholar"> | number
   name?: Prisma.StringWithAggregatesFilter<"Scholar"> | string
   school?: Prisma.StringWithAggregatesFilter<"Scholar"> | string
+  biography?: Prisma.StringWithAggregatesFilter<"Scholar"> | string
 }
 
 export type ScholarCreateInput = {
   name: string
   school: string
+  biography: string
   opinions?: Prisma.OpinionCreateNestedManyWithoutScholarInput
 }
 
@@ -250,12 +263,14 @@ export type ScholarUncheckedCreateInput = {
   id?: number
   name: string
   school: string
+  biography: string
   opinions?: Prisma.OpinionUncheckedCreateNestedManyWithoutScholarInput
 }
 
 export type ScholarUpdateInput = {
   name?: Prisma.StringFieldUpdateOperationsInput | string
   school?: Prisma.StringFieldUpdateOperationsInput | string
+  biography?: Prisma.StringFieldUpdateOperationsInput | string
   opinions?: Prisma.OpinionUpdateManyWithoutScholarNestedInput
 }
 
@@ -263,6 +278,7 @@ export type ScholarUncheckedUpdateInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
   name?: Prisma.StringFieldUpdateOperationsInput | string
   school?: Prisma.StringFieldUpdateOperationsInput | string
+  biography?: Prisma.StringFieldUpdateOperationsInput | string
   opinions?: Prisma.OpinionUncheckedUpdateManyWithoutScholarNestedInput
 }
 
@@ -270,23 +286,27 @@ export type ScholarCreateManyInput = {
   id?: number
   name: string
   school: string
+  biography: string
 }
 
 export type ScholarUpdateManyMutationInput = {
   name?: Prisma.StringFieldUpdateOperationsInput | string
   school?: Prisma.StringFieldUpdateOperationsInput | string
+  biography?: Prisma.StringFieldUpdateOperationsInput | string
 }
 
 export type ScholarUncheckedUpdateManyInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
   name?: Prisma.StringFieldUpdateOperationsInput | string
   school?: Prisma.StringFieldUpdateOperationsInput | string
+  biography?: Prisma.StringFieldUpdateOperationsInput | string
 }
 
 export type ScholarCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
   name?: Prisma.SortOrder
   school?: Prisma.SortOrder
+  biography?: Prisma.SortOrder
 }
 
 export type ScholarAvgOrderByAggregateInput = {
@@ -297,12 +317,14 @@ export type ScholarMaxOrderByAggregateInput = {
   id?: Prisma.SortOrder
   name?: Prisma.SortOrder
   school?: Prisma.SortOrder
+  biography?: Prisma.SortOrder
 }
 
 export type ScholarMinOrderByAggregateInput = {
   id?: Prisma.SortOrder
   name?: Prisma.SortOrder
   school?: Prisma.SortOrder
+  biography?: Prisma.SortOrder
 }
 
 export type ScholarSumOrderByAggregateInput = {
@@ -331,12 +353,14 @@ export type ScholarUpdateOneRequiredWithoutOpinionsNestedInput = {
 export type ScholarCreateWithoutOpinionsInput = {
   name: string
   school: string
+  biography: string
 }
 
 export type ScholarUncheckedCreateWithoutOpinionsInput = {
   id?: number
   name: string
   school: string
+  biography: string
 }
 
 export type ScholarCreateOrConnectWithoutOpinionsInput = {
@@ -358,12 +382,14 @@ export type ScholarUpdateToOneWithWhereWithoutOpinionsInput = {
 export type ScholarUpdateWithoutOpinionsInput = {
   name?: Prisma.StringFieldUpdateOperationsInput | string
   school?: Prisma.StringFieldUpdateOperationsInput | string
+  biography?: Prisma.StringFieldUpdateOperationsInput | string
 }
 
 export type ScholarUncheckedUpdateWithoutOpinionsInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
   name?: Prisma.StringFieldUpdateOperationsInput | string
   school?: Prisma.StringFieldUpdateOperationsInput | string
+  biography?: Prisma.StringFieldUpdateOperationsInput | string
 }
 
 
@@ -401,6 +427,7 @@ export type ScholarSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs 
   id?: boolean
   name?: boolean
   school?: boolean
+  biography?: boolean
   opinions?: boolean | Prisma.Scholar$opinionsArgs<ExtArgs>
   _count?: boolean | Prisma.ScholarCountOutputTypeDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["scholar"]>
@@ -409,21 +436,24 @@ export type ScholarSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Exten
   id?: boolean
   name?: boolean
   school?: boolean
+  biography?: boolean
 }, ExtArgs["result"]["scholar"]>
 
 export type ScholarSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
   name?: boolean
   school?: boolean
+  biography?: boolean
 }, ExtArgs["result"]["scholar"]>
 
 export type ScholarSelectScalar = {
   id?: boolean
   name?: boolean
   school?: boolean
+  biography?: boolean
 }
 
-export type ScholarOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "name" | "school", ExtArgs["result"]["scholar"]>
+export type ScholarOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "name" | "school" | "biography", ExtArgs["result"]["scholar"]>
 export type ScholarInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   opinions?: boolean | Prisma.Scholar$opinionsArgs<ExtArgs>
   _count?: boolean | Prisma.ScholarCountOutputTypeDefaultArgs<ExtArgs>
@@ -440,6 +470,7 @@ export type $ScholarPayload<ExtArgs extends runtime.Types.Extensions.InternalArg
     id: number
     name: string
     school: string
+    biography: string
   }, ExtArgs["result"]["scholar"]>
   composites: {}
 }
@@ -867,6 +898,7 @@ export interface ScholarFieldRefs {
   readonly id: Prisma.FieldRef<"Scholar", 'Int'>
   readonly name: Prisma.FieldRef<"Scholar", 'String'>
   readonly school: Prisma.FieldRef<"Scholar", 'String'>
+  readonly biography: Prisma.FieldRef<"Scholar", 'String'>
 }
     
 
