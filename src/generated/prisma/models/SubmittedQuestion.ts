@@ -37,6 +37,7 @@ export type SubmittedQuestionSumAggregateOutputType = {
 export type SubmittedQuestionMinAggregateOutputType = {
   id: number | null
   question: string | null
+  answer: string | null
   status: string | null
   createdAt: Date | null
 }
@@ -44,6 +45,7 @@ export type SubmittedQuestionMinAggregateOutputType = {
 export type SubmittedQuestionMaxAggregateOutputType = {
   id: number | null
   question: string | null
+  answer: string | null
   status: string | null
   createdAt: Date | null
 }
@@ -51,6 +53,7 @@ export type SubmittedQuestionMaxAggregateOutputType = {
 export type SubmittedQuestionCountAggregateOutputType = {
   id: number
   question: number
+  answer: number
   status: number
   createdAt: number
   _all: number
@@ -68,6 +71,7 @@ export type SubmittedQuestionSumAggregateInputType = {
 export type SubmittedQuestionMinAggregateInputType = {
   id?: true
   question?: true
+  answer?: true
   status?: true
   createdAt?: true
 }
@@ -75,6 +79,7 @@ export type SubmittedQuestionMinAggregateInputType = {
 export type SubmittedQuestionMaxAggregateInputType = {
   id?: true
   question?: true
+  answer?: true
   status?: true
   createdAt?: true
 }
@@ -82,6 +87,7 @@ export type SubmittedQuestionMaxAggregateInputType = {
 export type SubmittedQuestionCountAggregateInputType = {
   id?: true
   question?: true
+  answer?: true
   status?: true
   createdAt?: true
   _all?: true
@@ -176,6 +182,7 @@ export type SubmittedQuestionGroupByArgs<ExtArgs extends runtime.Types.Extension
 export type SubmittedQuestionGroupByOutputType = {
   id: number
   question: string
+  answer: string | null
   status: string
   createdAt: Date
   _count: SubmittedQuestionCountAggregateOutputType | null
@@ -206,6 +213,7 @@ export type SubmittedQuestionWhereInput = {
   NOT?: Prisma.SubmittedQuestionWhereInput | Prisma.SubmittedQuestionWhereInput[]
   id?: Prisma.IntFilter<"SubmittedQuestion"> | number
   question?: Prisma.StringFilter<"SubmittedQuestion"> | string
+  answer?: Prisma.StringNullableFilter<"SubmittedQuestion"> | string | null
   status?: Prisma.StringFilter<"SubmittedQuestion"> | string
   createdAt?: Prisma.DateTimeFilter<"SubmittedQuestion"> | Date | string
 }
@@ -213,6 +221,7 @@ export type SubmittedQuestionWhereInput = {
 export type SubmittedQuestionOrderByWithRelationInput = {
   id?: Prisma.SortOrder
   question?: Prisma.SortOrder
+  answer?: Prisma.SortOrderInput | Prisma.SortOrder
   status?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
 }
@@ -223,6 +232,7 @@ export type SubmittedQuestionWhereUniqueInput = Prisma.AtLeast<{
   OR?: Prisma.SubmittedQuestionWhereInput[]
   NOT?: Prisma.SubmittedQuestionWhereInput | Prisma.SubmittedQuestionWhereInput[]
   question?: Prisma.StringFilter<"SubmittedQuestion"> | string
+  answer?: Prisma.StringNullableFilter<"SubmittedQuestion"> | string | null
   status?: Prisma.StringFilter<"SubmittedQuestion"> | string
   createdAt?: Prisma.DateTimeFilter<"SubmittedQuestion"> | Date | string
 }, "id">
@@ -230,6 +240,7 @@ export type SubmittedQuestionWhereUniqueInput = Prisma.AtLeast<{
 export type SubmittedQuestionOrderByWithAggregationInput = {
   id?: Prisma.SortOrder
   question?: Prisma.SortOrder
+  answer?: Prisma.SortOrderInput | Prisma.SortOrder
   status?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   _count?: Prisma.SubmittedQuestionCountOrderByAggregateInput
@@ -245,12 +256,14 @@ export type SubmittedQuestionScalarWhereWithAggregatesInput = {
   NOT?: Prisma.SubmittedQuestionScalarWhereWithAggregatesInput | Prisma.SubmittedQuestionScalarWhereWithAggregatesInput[]
   id?: Prisma.IntWithAggregatesFilter<"SubmittedQuestion"> | number
   question?: Prisma.StringWithAggregatesFilter<"SubmittedQuestion"> | string
+  answer?: Prisma.StringNullableWithAggregatesFilter<"SubmittedQuestion"> | string | null
   status?: Prisma.StringWithAggregatesFilter<"SubmittedQuestion"> | string
   createdAt?: Prisma.DateTimeWithAggregatesFilter<"SubmittedQuestion"> | Date | string
 }
 
 export type SubmittedQuestionCreateInput = {
   question: string
+  answer?: string | null
   status: string
   createdAt?: Date | string
 }
@@ -258,12 +271,14 @@ export type SubmittedQuestionCreateInput = {
 export type SubmittedQuestionUncheckedCreateInput = {
   id?: number
   question: string
+  answer?: string | null
   status: string
   createdAt?: Date | string
 }
 
 export type SubmittedQuestionUpdateInput = {
   question?: Prisma.StringFieldUpdateOperationsInput | string
+  answer?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   status?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
@@ -271,6 +286,7 @@ export type SubmittedQuestionUpdateInput = {
 export type SubmittedQuestionUncheckedUpdateInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
   question?: Prisma.StringFieldUpdateOperationsInput | string
+  answer?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   status?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
@@ -278,12 +294,14 @@ export type SubmittedQuestionUncheckedUpdateInput = {
 export type SubmittedQuestionCreateManyInput = {
   id?: number
   question: string
+  answer?: string | null
   status: string
   createdAt?: Date | string
 }
 
 export type SubmittedQuestionUpdateManyMutationInput = {
   question?: Prisma.StringFieldUpdateOperationsInput | string
+  answer?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   status?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
@@ -291,6 +309,7 @@ export type SubmittedQuestionUpdateManyMutationInput = {
 export type SubmittedQuestionUncheckedUpdateManyInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
   question?: Prisma.StringFieldUpdateOperationsInput | string
+  answer?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   status?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
@@ -298,6 +317,7 @@ export type SubmittedQuestionUncheckedUpdateManyInput = {
 export type SubmittedQuestionCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
   question?: Prisma.SortOrder
+  answer?: Prisma.SortOrder
   status?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
 }
@@ -309,6 +329,7 @@ export type SubmittedQuestionAvgOrderByAggregateInput = {
 export type SubmittedQuestionMaxOrderByAggregateInput = {
   id?: Prisma.SortOrder
   question?: Prisma.SortOrder
+  answer?: Prisma.SortOrder
   status?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
 }
@@ -316,12 +337,17 @@ export type SubmittedQuestionMaxOrderByAggregateInput = {
 export type SubmittedQuestionMinOrderByAggregateInput = {
   id?: Prisma.SortOrder
   question?: Prisma.SortOrder
+  answer?: Prisma.SortOrder
   status?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
 }
 
 export type SubmittedQuestionSumOrderByAggregateInput = {
   id?: Prisma.SortOrder
+}
+
+export type NullableStringFieldUpdateOperationsInput = {
+  set?: string | null
 }
 
 export type DateTimeFieldUpdateOperationsInput = {
@@ -333,6 +359,7 @@ export type DateTimeFieldUpdateOperationsInput = {
 export type SubmittedQuestionSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
   question?: boolean
+  answer?: boolean
   status?: boolean
   createdAt?: boolean
 }, ExtArgs["result"]["submittedQuestion"]>
@@ -340,6 +367,7 @@ export type SubmittedQuestionSelect<ExtArgs extends runtime.Types.Extensions.Int
 export type SubmittedQuestionSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
   question?: boolean
+  answer?: boolean
   status?: boolean
   createdAt?: boolean
 }, ExtArgs["result"]["submittedQuestion"]>
@@ -347,6 +375,7 @@ export type SubmittedQuestionSelectCreateManyAndReturn<ExtArgs extends runtime.T
 export type SubmittedQuestionSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
   question?: boolean
+  answer?: boolean
   status?: boolean
   createdAt?: boolean
 }, ExtArgs["result"]["submittedQuestion"]>
@@ -354,11 +383,12 @@ export type SubmittedQuestionSelectUpdateManyAndReturn<ExtArgs extends runtime.T
 export type SubmittedQuestionSelectScalar = {
   id?: boolean
   question?: boolean
+  answer?: boolean
   status?: boolean
   createdAt?: boolean
 }
 
-export type SubmittedQuestionOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "question" | "status" | "createdAt", ExtArgs["result"]["submittedQuestion"]>
+export type SubmittedQuestionOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "question" | "answer" | "status" | "createdAt", ExtArgs["result"]["submittedQuestion"]>
 
 export type $SubmittedQuestionPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "SubmittedQuestion"
@@ -366,6 +396,7 @@ export type $SubmittedQuestionPayload<ExtArgs extends runtime.Types.Extensions.I
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: number
     question: string
+    answer: string | null
     status: string
     createdAt: Date
   }, ExtArgs["result"]["submittedQuestion"]>
@@ -793,6 +824,7 @@ export interface Prisma__SubmittedQuestionClient<T, Null = never, ExtArgs extend
 export interface SubmittedQuestionFieldRefs {
   readonly id: Prisma.FieldRef<"SubmittedQuestion", 'Int'>
   readonly question: Prisma.FieldRef<"SubmittedQuestion", 'String'>
+  readonly answer: Prisma.FieldRef<"SubmittedQuestion", 'String'>
   readonly status: Prisma.FieldRef<"SubmittedQuestion", 'String'>
   readonly createdAt: Prisma.FieldRef<"SubmittedQuestion", 'DateTime'>
 }

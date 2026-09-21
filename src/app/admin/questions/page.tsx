@@ -1,7 +1,18 @@
+import { cookies } from "next/headers";
+import { redirect } from "next/navigation";
 import prisma from "@/lib/prisma";
 import QuestionActions from "./QuestionActions";
- export default async function AdminQuestionsPage() {
-  const questions = await prisma.submittedQuestion.findMany({  // databasedeki submitted questions ları getiriyor
+
+export default async function AdminQuestionsPage() {
+
+  const cookieStore = await cookies();
+  const session = cookieStore.get("admin_session");
+
+  if (session?.value !== process.env.ADMIN_SESSION_TOKEN) {
+    redirect("/admin/login");
+  }
+
+ const questions = await prisma.submittedQuestion.findMany({  // databasedeki submitted questions ları getiriyor
 
     orderBy: {
       createdAt: "desc",

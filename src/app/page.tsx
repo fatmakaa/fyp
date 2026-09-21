@@ -6,6 +6,15 @@ type Topic = {
   category: string;
 };
 
+type SubmittedQuestion = {
+  id: number;
+  question: string;
+    answer: string | null;
+  status: string;
+  createdAt: string;
+};
+
+
 export default async function Home() {
   const response = await fetch(
     "http://localhost:3000/api/topics",
@@ -13,6 +22,19 @@ export default async function Home() {
   );
 
   const topics: Topic[] = await response.json();
+
+
+  const questionsResponse = await fetch(
+    "http://localhost:3000/api/questions",
+    { cache: "no-store" }
+  );
+
+  const approvedQuestions: SubmittedQuestion[] = await questionsResponse.json();
+
+
+// fetching the approved questions from my API. The API retrieves only questions with an Approved status from PostgreSQL,
+ // and the homepage uses the returned JSON data to display them.
+
 
   return (
     <main className="min-h-screen bg-gray-50 text-gray-900">
@@ -72,6 +94,9 @@ export default async function Home() {
         </div>
       </section>
 
+
+
+
       {/* Topics */}
       <section className="mx-auto max-w-5xl px-8 pb-12">
         <h2 className="text-2xl font-semibold text-gray-900">
@@ -102,6 +127,49 @@ export default async function Home() {
 
         </div>
       </section>
+
+
+      {/* Approved Questions */}
+      <section className="mx-auto max-w-5xl px-8 pb-12">
+
+        <h2 className="text-2xl font-semibold text-gray-900">
+          Approved Questions
+        </h2>
+
+        <div className="mt-6 space-y-4">
+
+          {approvedQuestions.map((question) => (
+            <div
+              key={question.id}
+              className="rounded-lg border bg-white p-6 shadow-sm"
+            >
+              <h3 className="text-xl font-semibold text-gray-900">
+                {question.question}
+              </h3>
+
+              <div className="mt-4">
+                <p className="font-semibold text-gray-900">
+                  Answer
+                </p>
+
+                <p className="mt-2 text-gray-700">
+                  {question.answer}
+                </p>
+              </div>
+            </div>
+          ))}
+
+        </div>
+
+      </section>
+
+
+
+
+
+
+
+
 
 {/* Submit a Question */}
 <section className="border-t bg-gray-50">

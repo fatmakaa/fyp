@@ -22,6 +22,19 @@ export async function POST(request: Request) {  //post request geldiğinde bunu 
   return Response.json(submittedQuestion, { status: 201 });
 }
 
+export async function GET() {
+  const questions = await prisma.submittedQuestion.findMany({
+    where: {
+      status: "Approved",
+    },
+    orderBy: {
+      createdAt: "desc",
+    },
+  });
+
+  return Response.json(questions);
+}
+
 
 //route.ts basically requesti alır, kontrol eder, database işler, response döndürür
 
