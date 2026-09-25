@@ -34,7 +34,6 @@ export default function AdminLoginPage() {
   return (
     <main className="min-h-screen bg-gray-50 p-8 text-gray-900">
       <div className="mx-auto max-w-md">
-
         <h1 className="text-3xl font-bold">
           Admin Login
         </h1>
@@ -43,7 +42,6 @@ export default function AdminLoginPage() {
           onSubmit={handleLogin}
           className="mt-8 rounded-lg border bg-white p-6 shadow-sm"
         >
-
           <label className="font-semibold">
             Username
           </label>
@@ -78,7 +76,6 @@ export default function AdminLoginPage() {
               {error}
             </p>
           )}
-
         </form>
       </div>
     </main>

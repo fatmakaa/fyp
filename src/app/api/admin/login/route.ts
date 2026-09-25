@@ -17,12 +17,16 @@ export async function POST(request: Request) {
 
   const cookieStore = await cookies();
 
-  cookieStore.set("admin_session", process.env.ADMIN_SESSION_TOKEN!, {
-    httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
-    sameSite: "lax",
-    path: "/",
-  });
+  cookieStore.set(
+    "admin_session",
+    process.env.ADMIN_SESSION_TOKEN!,
+    {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "lax",
+      path: "/",
+    }
+  );
 
   return Response.json({ success: true });
 }

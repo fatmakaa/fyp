@@ -5,18 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8fd0c15-984e-4b1c-aa71-4e6103bcfc61" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.agents/skills/prisma-composer/SKILL.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.claude/skills/prisma-composer/SKILL.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cursor/skills/prisma-composer/SKILL.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.devin/skills/prisma-composer/SKILL.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fyp.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin/login/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin/login/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/admin/questions/QuestionActions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin/questions/QuestionActions.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/admin/questions/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin/questions/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/questions/[id]/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/questions/[id]/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/admin/login/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/admin/login/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/questions/[id]/route.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/api/questions/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/questions/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/scholars/[id]/route.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/topics/[id]/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/topics/[id]/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/topics/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/topics/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generated/prisma/commonInputTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/generated/prisma/commonInputTypes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generated/prisma/internal/class.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/generated/prisma/internal/class.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generated/prisma/internal/prismaNamespace.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/generated/prisma/internal/prismaNamespace.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generated/prisma/internal/prismaNamespaceBrowser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/generated/prisma/internal/prismaNamespaceBrowser.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generated/prisma/models/SubmittedQuestion.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/generated/prisma/models/SubmittedQuestion.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/scholars/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/scholars/[id]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/submit-question/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/submit-question/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/topics/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/topics/[id]/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

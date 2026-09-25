@@ -4,7 +4,6 @@ import prisma from "@/lib/prisma";
 import QuestionActions from "./QuestionActions";
 
 export default async function AdminQuestionsPage() {
-
   const cookieStore = await cookies();
   const session = cookieStore.get("admin_session");
 
@@ -12,8 +11,7 @@ export default async function AdminQuestionsPage() {
     redirect("/admin/login");
   }
 
- const questions = await prisma.submittedQuestion.findMany({  // databasedeki submitted questions ları getiriyor
-
+  const questions = await prisma.submittedQuestion.findMany({
     orderBy: {
       createdAt: "desc",
     },
@@ -46,8 +44,9 @@ export default async function AdminQuestionsPage() {
                 Status: {question.status}
               </p>
 
-           <QuestionActions questionId={question.id} />
-
+              <QuestionActions
+                questionId={question.id}
+              />
 
               <p className="mt-1 text-sm text-gray-500">
                 Submitted:{" "}
@@ -62,11 +61,3 @@ export default async function AdminQuestionsPage() {
     </main>
   );
 }
-
-
-
-//basically bu page database de bulunan submitted questionsları admine gösterir.
-//adminin gördüğü sayfa
-
-
-

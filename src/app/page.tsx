@@ -9,32 +9,25 @@ type Topic = {
 type SubmittedQuestion = {
   id: number;
   question: string;
-    answer: string | null;
-  status: string;
+  answer: string | null;
   createdAt: string;
 };
 
-
 export default async function Home() {
-  const response = await fetch(
+  const topicsResponse = await fetch(
     "http://localhost:3000/api/topics",
     { cache: "no-store" }
   );
 
-  const topics: Topic[] = await response.json();
-
+  const topics: Topic[] = await topicsResponse.json();
 
   const questionsResponse = await fetch(
     "http://localhost:3000/api/questions",
     { cache: "no-store" }
   );
 
-  const approvedQuestions: SubmittedQuestion[] = await questionsResponse.json();
-
-
-// fetching the approved questions from my API. The API retrieves only questions with an Approved status from PostgreSQL,
- // and the homepage uses the returned JSON data to display them.
-
+  const approvedQuestions: SubmittedQuestion[] =
+    await questionsResponse.json();
 
   return (
     <main className="min-h-screen bg-gray-50 text-gray-900">
@@ -42,7 +35,7 @@ export default async function Home() {
       {/* Header */}
       <section className="border-b bg-white">
         <div className="mx-auto max-w-5xl px-8 py-16">
-          <h1 className="text-4xl font-bold text-gray-900">
+          <h1 className="text-4xl font-bold">
             Islamic Legal Information System
           </h1>
 
@@ -55,14 +48,14 @@ export default async function Home() {
 
       {/* How it works */}
       <section className="mx-auto max-w-5xl px-8 py-12">
-        <h2 className="text-2xl font-semibold text-gray-900">
+        <h2 className="text-2xl font-semibold">
           How It Works
         </h2>
 
         <div className="mt-6 grid gap-6 md:grid-cols-3">
 
           <div className="rounded-lg border bg-white p-6">
-            <h3 className="text-lg font-semibold text-gray-900">
+            <h3 className="text-lg font-semibold">
               1. Choose a Topic
             </h3>
 
@@ -72,17 +65,18 @@ export default async function Home() {
           </div>
 
           <div className="rounded-lg border bg-white p-6">
-            <h3 className="text-lg font-semibold text-gray-900">
+            <h3 className="text-lg font-semibold">
               2. Compare Opinions
             </h3>
 
             <p className="mt-2 text-gray-600">
-              View the opinions of the four Sunni schools of thought side by side.
+              View the opinions of the four Sunni schools of thought
+              side by side.
             </p>
           </div>
 
           <div className="rounded-lg border bg-white p-6">
-            <h3 className="text-lg font-semibold text-gray-900">
+            <h3 className="text-lg font-semibold">
               3. Review Sources
             </h3>
 
@@ -94,12 +88,9 @@ export default async function Home() {
         </div>
       </section>
 
-
-
-
       {/* Topics */}
       <section className="mx-auto max-w-5xl px-8 pb-12">
-        <h2 className="text-2xl font-semibold text-gray-900">
+        <h2 className="text-2xl font-semibold">
           Available Topics
         </h2>
 
@@ -111,7 +102,7 @@ export default async function Home() {
               href={`/topics/${topic.id}`}
               className="rounded-lg border bg-white p-6 shadow-sm transition hover:shadow-md"
             >
-              <h3 className="text-xl font-semibold text-gray-900">
+              <h3 className="text-xl font-semibold">
                 {topic.question}
               </h3>
 
@@ -119,7 +110,7 @@ export default async function Home() {
                 Category: {topic.category}
               </p>
 
-              <p className="mt-4 font-medium text-gray-900">
+              <p className="mt-4 font-medium">
                 View comparison →
               </p>
             </Link>
@@ -128,11 +119,9 @@ export default async function Home() {
         </div>
       </section>
 
-
       {/* Approved Questions */}
       <section className="mx-auto max-w-5xl px-8 pb-12">
-
-        <h2 className="text-2xl font-semibold text-gray-900">
+        <h2 className="text-2xl font-semibold">
           Approved Questions
         </h2>
 
@@ -143,12 +132,12 @@ export default async function Home() {
               key={question.id}
               className="rounded-lg border bg-white p-6 shadow-sm"
             >
-              <h3 className="text-xl font-semibold text-gray-900">
+              <h3 className="text-xl font-semibold">
                 {question.question}
               </h3>
 
               <div className="mt-4">
-                <p className="font-semibold text-gray-900">
+                <p className="font-semibold">
                   Answer
                 </p>
 
@@ -160,47 +149,35 @@ export default async function Home() {
           ))}
 
         </div>
-
       </section>
 
+      {/* Submit a Question */}
+      <section className="border-t bg-gray-50">
+        <div className="mx-auto max-w-5xl px-8 py-12">
 
+          <h2 className="text-2xl font-semibold">
+            Have a Question?
+          </h2>
 
+          <p className="mt-3 max-w-2xl text-gray-600">
+            Submit an Islamic legal question for review.
+          </p>
 
+          <Link
+            href="/submit-question"
+            className="mt-5 inline-block rounded-lg bg-black px-6 py-3 font-medium text-white hover:bg-gray-800"
+          >
+            Submit a Question
+          </Link>
 
-
-
-
-
-{/* Submit a Question */}
-<section className="border-t bg-gray-50">
-  <div className="mx-auto max-w-5xl px-8 py-12">
-
-    <h2 className="text-2xl font-semibold text-gray-900">
-      Have a Question?
-    </h2>
-
-    <p className="mt-3 max-w-2xl text-gray-600">
-      Submit an Islamic legal question for review.
-    </p>
-
-    <Link
-      href="/submit-question"
-      className="mt-5 inline-block rounded-lg bg-black px-6 py-3 font-medium text-white hover:bg-gray-800"
-    >
-      Submit a Question
-    </Link>
-
-  </div>
-</section>
-
-
-
+        </div>
+      </section>
 
       {/* About the system */}
       <section className="border-t bg-white">
         <div className="mx-auto max-w-5xl px-8 py-12">
 
-          <h2 className="text-2xl font-semibold text-gray-900">
+          <h2 className="text-2xl font-semibold">
             About the System
           </h2>
 

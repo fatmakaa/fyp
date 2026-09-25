@@ -9,8 +9,8 @@ export default function SubmitQuestionPage() {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
 
-    const response = await fetch("/api/questions", {  //frontend doğrudan databse gitmiyor
-      method: "POST",                                 // questionu api/questions endpointine gönder diyor, from there api is going to retrive the data from postgreSQL
+    const response = await fetch("/api/questions", {
+      method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
@@ -67,6 +67,7 @@ export default function SubmitQuestionPage() {
               {message}
             </p>
           )}
+
         </form>
 
       </div>

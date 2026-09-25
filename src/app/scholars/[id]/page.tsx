@@ -1,11 +1,5 @@
 import Link from "next/link";
-
-type Scholar = {
-  id: number;
-  name: string;
-  school: string;
-  biography: string;
-};
+import prisma from "@/lib/prisma";
 
 export default async function ScholarPage({
   params,
@@ -14,12 +8,30 @@ export default async function ScholarPage({
 }) {
   const { id } = await params;
 
-  const response = await fetch(
-    `http://localhost:3000/api/scholars/${id}`,
-    { cache: "no-store" }
-  );
+  const scholar = await prisma.scholar.findUnique({
+    where: {
+      id: Number(id),
+    },
+  });
 
-  const scholar: Scholar = await response.json();
+  if (!scholar) {
+    return (
+      <main className="min-h-screen bg-gray-50 p-8 text-gray-900">
+        <div className="mx-auto max-w-3xl">
+          <h1 className="text-3xl font-bold">
+            Scholar not found
+          </h1>
+
+          <Link
+            href="/"
+            className="mt-4 inline-block text-blue-600 underline"
+          >
+            ← Back to Home
+          </Link>
+        </div>
+      </main>
+    );
+  }
 
   return (
     <main className="min-h-screen bg-gray-50 p-8 text-gray-900">

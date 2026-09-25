@@ -10,12 +10,13 @@ export default function QuestionActions({
   const [answer, setAnswer] = useState("");
 
   async function updateStatus(status: "Approved" | "Rejected") {
-    const response = await fetch(`/api/questions/${questionId}`, {
+    const response = await fetch("/api/questions", {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
+        id: questionId,
         status,
         answer,
       }),
@@ -30,7 +31,7 @@ export default function QuestionActions({
 
   return (
     <div className="mt-4">
-      <label className="font-semibold text-gray-900">
+      <label className="font-semibold">
         Answer
       </label>
 
