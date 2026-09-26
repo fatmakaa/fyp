@@ -50,7 +50,7 @@ export default async function ScholarPage({
             School of Thought
           </p>
 
-          <h1 className="mt-2 text-4xl font-bold text-gray-900">
+          <h1 className="mt-2 text-4xl font-bold">
             {scholar.name}
           </h1>
 
@@ -59,7 +59,7 @@ export default async function ScholarPage({
           </p>
 
           <div className="mt-8 border-t pt-6">
-            <h2 className="text-2xl font-semibold text-gray-900">
+            <h2 className="text-2xl font-semibold">
               Biography
             </h2>
 
@@ -69,7 +69,6 @@ export default async function ScholarPage({
           </div>
 
         </div>
-
       </div>
     </main>
   );

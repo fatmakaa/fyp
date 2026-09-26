@@ -29,8 +29,6 @@ model Opinion {
   ruling           String
   reasoning        String
   methodologyNote  String
-  verificationStatus String
-
   topicId   Int
   scholarId Int
 

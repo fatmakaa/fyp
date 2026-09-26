@@ -929,7 +929,6 @@ export const OpinionScalarFieldEnum = {
   ruling: 'ruling',
   reasoning: 'reasoning',
   methodologyNote: 'methodologyNote',
-  verificationStatus: 'verificationStatus',
   topicId: 'topicId',
   scholarId: 'scholarId'
 } as const

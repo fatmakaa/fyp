@@ -43,7 +43,6 @@ export type OpinionMinAggregateOutputType = {
   ruling: string | null
   reasoning: string | null
   methodologyNote: string | null
-  verificationStatus: string | null
   topicId: number | null
   scholarId: number | null
 }
@@ -53,7 +52,6 @@ export type OpinionMaxAggregateOutputType = {
   ruling: string | null
   reasoning: string | null
   methodologyNote: string | null
-  verificationStatus: string | null
   topicId: number | null
   scholarId: number | null
 }
@@ -63,7 +61,6 @@ export type OpinionCountAggregateOutputType = {
   ruling: number
   reasoning: number
   methodologyNote: number
-  verificationStatus: number
   topicId: number
   scholarId: number
   _all: number
@@ -87,7 +84,6 @@ export type OpinionMinAggregateInputType = {
   ruling?: true
   reasoning?: true
   methodologyNote?: true
-  verificationStatus?: true
   topicId?: true
   scholarId?: true
 }
@@ -97,7 +93,6 @@ export type OpinionMaxAggregateInputType = {
   ruling?: true
   reasoning?: true
   methodologyNote?: true
-  verificationStatus?: true
   topicId?: true
   scholarId?: true
 }
@@ -107,7 +102,6 @@ export type OpinionCountAggregateInputType = {
   ruling?: true
   reasoning?: true
   methodologyNote?: true
-  verificationStatus?: true
   topicId?: true
   scholarId?: true
   _all?: true
@@ -204,7 +198,6 @@ export type OpinionGroupByOutputType = {
   ruling: string
   reasoning: string
   methodologyNote: string
-  verificationStatus: string
   topicId: number
   scholarId: number
   _count: OpinionCountAggregateOutputType | null
@@ -237,7 +230,6 @@ export type OpinionWhereInput = {
   ruling?: Prisma.StringFilter<"Opinion"> | string
   reasoning?: Prisma.StringFilter<"Opinion"> | string
   methodologyNote?: Prisma.StringFilter<"Opinion"> | string
-  verificationStatus?: Prisma.StringFilter<"Opinion"> | string
   topicId?: Prisma.IntFilter<"Opinion"> | number
   scholarId?: Prisma.IntFilter<"Opinion"> | number
   topic?: Prisma.XOR<Prisma.TopicScalarRelationFilter, Prisma.TopicWhereInput>
@@ -251,7 +243,6 @@ export type OpinionOrderByWithRelationInput = {
   ruling?: Prisma.SortOrder
   reasoning?: Prisma.SortOrder
   methodologyNote?: Prisma.SortOrder
-  verificationStatus?: Prisma.SortOrder
   topicId?: Prisma.SortOrder
   scholarId?: Prisma.SortOrder
   topic?: Prisma.TopicOrderByWithRelationInput
@@ -268,7 +259,6 @@ export type OpinionWhereUniqueInput = Prisma.AtLeast<{
   ruling?: Prisma.StringFilter<"Opinion"> | string
   reasoning?: Prisma.StringFilter<"Opinion"> | string
   methodologyNote?: Prisma.StringFilter<"Opinion"> | string
-  verificationStatus?: Prisma.StringFilter<"Opinion"> | string
   topicId?: Prisma.IntFilter<"Opinion"> | number
   scholarId?: Prisma.IntFilter<"Opinion"> | number
   topic?: Prisma.XOR<Prisma.TopicScalarRelationFilter, Prisma.TopicWhereInput>
@@ -282,7 +272,6 @@ export type OpinionOrderByWithAggregationInput = {
   ruling?: Prisma.SortOrder
   reasoning?: Prisma.SortOrder
   methodologyNote?: Prisma.SortOrder
-  verificationStatus?: Prisma.SortOrder
   topicId?: Prisma.SortOrder
   scholarId?: Prisma.SortOrder
   _count?: Prisma.OpinionCountOrderByAggregateInput
@@ -300,7 +289,6 @@ export type OpinionScalarWhereWithAggregatesInput = {
   ruling?: Prisma.StringWithAggregatesFilter<"Opinion"> | string
   reasoning?: Prisma.StringWithAggregatesFilter<"Opinion"> | string
   methodologyNote?: Prisma.StringWithAggregatesFilter<"Opinion"> | string
-  verificationStatus?: Prisma.StringWithAggregatesFilter<"Opinion"> | string
   topicId?: Prisma.IntWithAggregatesFilter<"Opinion"> | number
   scholarId?: Prisma.IntWithAggregatesFilter<"Opinion"> | number
 }
@@ -309,7 +297,6 @@ export type OpinionCreateInput = {
   ruling: string
   reasoning: string
   methodologyNote: string
-  verificationStatus: string
   topic: Prisma.TopicCreateNestedOneWithoutOpinionsInput
   scholar: Prisma.ScholarCreateNestedOneWithoutOpinionsInput
   sources?: Prisma.SourceCreateNestedManyWithoutOpinionInput
@@ -321,7 +308,6 @@ export type OpinionUncheckedCreateInput = {
   ruling: string
   reasoning: string
   methodologyNote: string
-  verificationStatus: string
   topicId: number
   scholarId: number
   sources?: Prisma.SourceUncheckedCreateNestedManyWithoutOpinionInput
@@ -332,7 +318,6 @@ export type OpinionUpdateInput = {
   ruling?: Prisma.StringFieldUpdateOperationsInput | string
   reasoning?: Prisma.StringFieldUpdateOperationsInput | string
   methodologyNote?: Prisma.StringFieldUpdateOperationsInput | string
-  verificationStatus?: Prisma.StringFieldUpdateOperationsInput | string
   topic?: Prisma.TopicUpdateOneRequiredWithoutOpinionsNestedInput
   scholar?: Prisma.ScholarUpdateOneRequiredWithoutOpinionsNestedInput
   sources?: Prisma.SourceUpdateManyWithoutOpinionNestedInput
@@ -344,7 +329,6 @@ export type OpinionUncheckedUpdateInput = {
   ruling?: Prisma.StringFieldUpdateOperationsInput | string
   reasoning?: Prisma.StringFieldUpdateOperationsInput | string
   methodologyNote?: Prisma.StringFieldUpdateOperationsInput | string
-  verificationStatus?: Prisma.StringFieldUpdateOperationsInput | string
   topicId?: Prisma.IntFieldUpdateOperationsInput | number
   scholarId?: Prisma.IntFieldUpdateOperationsInput | number
   sources?: Prisma.SourceUncheckedUpdateManyWithoutOpinionNestedInput
@@ -356,7 +340,6 @@ export type OpinionCreateManyInput = {
   ruling: string
   reasoning: string
   methodologyNote: string
-  verificationStatus: string
   topicId: number
   scholarId: number
 }
@@ -365,7 +348,6 @@ export type OpinionUpdateManyMutationInput = {
   ruling?: Prisma.StringFieldUpdateOperationsInput | string
   reasoning?: Prisma.StringFieldUpdateOperationsInput | string
   methodologyNote?: Prisma.StringFieldUpdateOperationsInput | string
-  verificationStatus?: Prisma.StringFieldUpdateOperationsInput | string
 }
 
 export type OpinionUncheckedUpdateManyInput = {
@@ -373,7 +355,6 @@ export type OpinionUncheckedUpdateManyInput = {
   ruling?: Prisma.StringFieldUpdateOperationsInput | string
   reasoning?: Prisma.StringFieldUpdateOperationsInput | string
   methodologyNote?: Prisma.StringFieldUpdateOperationsInput | string
-  verificationStatus?: Prisma.StringFieldUpdateOperationsInput | string
   topicId?: Prisma.IntFieldUpdateOperationsInput | number
   scholarId?: Prisma.IntFieldUpdateOperationsInput | number
 }
@@ -393,7 +374,6 @@ export type OpinionCountOrderByAggregateInput = {
   ruling?: Prisma.SortOrder
   reasoning?: Prisma.SortOrder
   methodologyNote?: Prisma.SortOrder
-  verificationStatus?: Prisma.SortOrder
   topicId?: Prisma.SortOrder
   scholarId?: Prisma.SortOrder
 }
@@ -409,7 +389,6 @@ export type OpinionMaxOrderByAggregateInput = {
   ruling?: Prisma.SortOrder
   reasoning?: Prisma.SortOrder
   methodologyNote?: Prisma.SortOrder
-  verificationStatus?: Prisma.SortOrder
   topicId?: Prisma.SortOrder
   scholarId?: Prisma.SortOrder
 }
@@ -419,7 +398,6 @@ export type OpinionMinOrderByAggregateInput = {
   ruling?: Prisma.SortOrder
   reasoning?: Prisma.SortOrder
   methodologyNote?: Prisma.SortOrder
-  verificationStatus?: Prisma.SortOrder
   topicId?: Prisma.SortOrder
   scholarId?: Prisma.SortOrder
 }
@@ -551,7 +529,6 @@ export type OpinionCreateWithoutTopicInput = {
   ruling: string
   reasoning: string
   methodologyNote: string
-  verificationStatus: string
   scholar: Prisma.ScholarCreateNestedOneWithoutOpinionsInput
   sources?: Prisma.SourceCreateNestedManyWithoutOpinionInput
   evidenceReferences?: Prisma.EvidenceReferenceCreateNestedManyWithoutOpinionInput
@@ -562,7 +539,6 @@ export type OpinionUncheckedCreateWithoutTopicInput = {
   ruling: string
   reasoning: string
   methodologyNote: string
-  verificationStatus: string
   scholarId: number
   sources?: Prisma.SourceUncheckedCreateNestedManyWithoutOpinionInput
   evidenceReferences?: Prisma.EvidenceReferenceUncheckedCreateNestedManyWithoutOpinionInput
@@ -602,7 +578,6 @@ export type OpinionScalarWhereInput = {
   ruling?: Prisma.StringFilter<"Opinion"> | string
   reasoning?: Prisma.StringFilter<"Opinion"> | string
   methodologyNote?: Prisma.StringFilter<"Opinion"> | string
-  verificationStatus?: Prisma.StringFilter<"Opinion"> | string
   topicId?: Prisma.IntFilter<"Opinion"> | number
   scholarId?: Prisma.IntFilter<"Opinion"> | number
 }
@@ -611,7 +586,6 @@ export type OpinionCreateWithoutScholarInput = {
   ruling: string
   reasoning: string
   methodologyNote: string
-  verificationStatus: string
   topic: Prisma.TopicCreateNestedOneWithoutOpinionsInput
   sources?: Prisma.SourceCreateNestedManyWithoutOpinionInput
   evidenceReferences?: Prisma.EvidenceReferenceCreateNestedManyWithoutOpinionInput
@@ -622,7 +596,6 @@ export type OpinionUncheckedCreateWithoutScholarInput = {
   ruling: string
   reasoning: string
   methodologyNote: string
-  verificationStatus: string
   topicId: number
   sources?: Prisma.SourceUncheckedCreateNestedManyWithoutOpinionInput
   evidenceReferences?: Prisma.EvidenceReferenceUncheckedCreateNestedManyWithoutOpinionInput
@@ -658,7 +631,6 @@ export type OpinionCreateWithoutSourcesInput = {
   ruling: string
   reasoning: string
   methodologyNote: string
-  verificationStatus: string
   topic: Prisma.TopicCreateNestedOneWithoutOpinionsInput
   scholar: Prisma.ScholarCreateNestedOneWithoutOpinionsInput
   evidenceReferences?: Prisma.EvidenceReferenceCreateNestedManyWithoutOpinionInput
@@ -669,7 +641,6 @@ export type OpinionUncheckedCreateWithoutSourcesInput = {
   ruling: string
   reasoning: string
   methodologyNote: string
-  verificationStatus: string
   topicId: number
   scholarId: number
   evidenceReferences?: Prisma.EvidenceReferenceUncheckedCreateNestedManyWithoutOpinionInput
@@ -695,7 +666,6 @@ export type OpinionUpdateWithoutSourcesInput = {
   ruling?: Prisma.StringFieldUpdateOperationsInput | string
   reasoning?: Prisma.StringFieldUpdateOperationsInput | string
   methodologyNote?: Prisma.StringFieldUpdateOperationsInput | string
-  verificationStatus?: Prisma.StringFieldUpdateOperationsInput | string
   topic?: Prisma.TopicUpdateOneRequiredWithoutOpinionsNestedInput
   scholar?: Prisma.ScholarUpdateOneRequiredWithoutOpinionsNestedInput
   evidenceReferences?: Prisma.EvidenceReferenceUpdateManyWithoutOpinionNestedInput
@@ -706,7 +676,6 @@ export type OpinionUncheckedUpdateWithoutSourcesInput = {
   ruling?: Prisma.StringFieldUpdateOperationsInput | string
   reasoning?: Prisma.StringFieldUpdateOperationsInput | string
   methodologyNote?: Prisma.StringFieldUpdateOperationsInput | string
-  verificationStatus?: Prisma.StringFieldUpdateOperationsInput | string
   topicId?: Prisma.IntFieldUpdateOperationsInput | number
   scholarId?: Prisma.IntFieldUpdateOperationsInput | number
   evidenceReferences?: Prisma.EvidenceReferenceUncheckedUpdateManyWithoutOpinionNestedInput
@@ -716,7 +685,6 @@ export type OpinionCreateWithoutEvidenceReferencesInput = {
   ruling: string
   reasoning: string
   methodologyNote: string
-  verificationStatus: string
   topic: Prisma.TopicCreateNestedOneWithoutOpinionsInput
   scholar: Prisma.ScholarCreateNestedOneWithoutOpinionsInput
   sources?: Prisma.SourceCreateNestedManyWithoutOpinionInput
@@ -727,7 +695,6 @@ export type OpinionUncheckedCreateWithoutEvidenceReferencesInput = {
   ruling: string
   reasoning: string
   methodologyNote: string
-  verificationStatus: string
   topicId: number
   scholarId: number
   sources?: Prisma.SourceUncheckedCreateNestedManyWithoutOpinionInput
@@ -753,7 +720,6 @@ export type OpinionUpdateWithoutEvidenceReferencesInput = {
   ruling?: Prisma.StringFieldUpdateOperationsInput | string
   reasoning?: Prisma.StringFieldUpdateOperationsInput | string
   methodologyNote?: Prisma.StringFieldUpdateOperationsInput | string
-  verificationStatus?: Prisma.StringFieldUpdateOperationsInput | string
   topic?: Prisma.TopicUpdateOneRequiredWithoutOpinionsNestedInput
   scholar?: Prisma.ScholarUpdateOneRequiredWithoutOpinionsNestedInput
   sources?: Prisma.SourceUpdateManyWithoutOpinionNestedInput
@@ -764,7 +730,6 @@ export type OpinionUncheckedUpdateWithoutEvidenceReferencesInput = {
   ruling?: Prisma.StringFieldUpdateOperationsInput | string
   reasoning?: Prisma.StringFieldUpdateOperationsInput | string
   methodologyNote?: Prisma.StringFieldUpdateOperationsInput | string
-  verificationStatus?: Prisma.StringFieldUpdateOperationsInput | string
   topicId?: Prisma.IntFieldUpdateOperationsInput | number
   scholarId?: Prisma.IntFieldUpdateOperationsInput | number
   sources?: Prisma.SourceUncheckedUpdateManyWithoutOpinionNestedInput
@@ -775,7 +740,6 @@ export type OpinionCreateManyTopicInput = {
   ruling: string
   reasoning: string
   methodologyNote: string
-  verificationStatus: string
   scholarId: number
 }
 
@@ -783,7 +747,6 @@ export type OpinionUpdateWithoutTopicInput = {
   ruling?: Prisma.StringFieldUpdateOperationsInput | string
   reasoning?: Prisma.StringFieldUpdateOperationsInput | string
   methodologyNote?: Prisma.StringFieldUpdateOperationsInput | string
-  verificationStatus?: Prisma.StringFieldUpdateOperationsInput | string
   scholar?: Prisma.ScholarUpdateOneRequiredWithoutOpinionsNestedInput
   sources?: Prisma.SourceUpdateManyWithoutOpinionNestedInput
   evidenceReferences?: Prisma.EvidenceReferenceUpdateManyWithoutOpinionNestedInput
@@ -794,7 +757,6 @@ export type OpinionUncheckedUpdateWithoutTopicInput = {
   ruling?: Prisma.StringFieldUpdateOperationsInput | string
   reasoning?: Prisma.StringFieldUpdateOperationsInput | string
   methodologyNote?: Prisma.StringFieldUpdateOperationsInput | string
-  verificationStatus?: Prisma.StringFieldUpdateOperationsInput | string
   scholarId?: Prisma.IntFieldUpdateOperationsInput | number
   sources?: Prisma.SourceUncheckedUpdateManyWithoutOpinionNestedInput
   evidenceReferences?: Prisma.EvidenceReferenceUncheckedUpdateManyWithoutOpinionNestedInput
@@ -805,7 +767,6 @@ export type OpinionUncheckedUpdateManyWithoutTopicInput = {
   ruling?: Prisma.StringFieldUpdateOperationsInput | string
   reasoning?: Prisma.StringFieldUpdateOperationsInput | string
   methodologyNote?: Prisma.StringFieldUpdateOperationsInput | string
-  verificationStatus?: Prisma.StringFieldUpdateOperationsInput | string
   scholarId?: Prisma.IntFieldUpdateOperationsInput | number
 }
 
@@ -814,7 +775,6 @@ export type OpinionCreateManyScholarInput = {
   ruling: string
   reasoning: string
   methodologyNote: string
-  verificationStatus: string
   topicId: number
 }
 
@@ -822,7 +782,6 @@ export type OpinionUpdateWithoutScholarInput = {
   ruling?: Prisma.StringFieldUpdateOperationsInput | string
   reasoning?: Prisma.StringFieldUpdateOperationsInput | string
   methodologyNote?: Prisma.StringFieldUpdateOperationsInput | string
-  verificationStatus?: Prisma.StringFieldUpdateOperationsInput | string
   topic?: Prisma.TopicUpdateOneRequiredWithoutOpinionsNestedInput
   sources?: Prisma.SourceUpdateManyWithoutOpinionNestedInput
   evidenceReferences?: Prisma.EvidenceReferenceUpdateManyWithoutOpinionNestedInput
@@ -833,7 +792,6 @@ export type OpinionUncheckedUpdateWithoutScholarInput = {
   ruling?: Prisma.StringFieldUpdateOperationsInput | string
   reasoning?: Prisma.StringFieldUpdateOperationsInput | string
   methodologyNote?: Prisma.StringFieldUpdateOperationsInput | string
-  verificationStatus?: Prisma.StringFieldUpdateOperationsInput | string
   topicId?: Prisma.IntFieldUpdateOperationsInput | number
   sources?: Prisma.SourceUncheckedUpdateManyWithoutOpinionNestedInput
   evidenceReferences?: Prisma.EvidenceReferenceUncheckedUpdateManyWithoutOpinionNestedInput
@@ -844,7 +802,6 @@ export type OpinionUncheckedUpdateManyWithoutScholarInput = {
   ruling?: Prisma.StringFieldUpdateOperationsInput | string
   reasoning?: Prisma.StringFieldUpdateOperationsInput | string
   methodologyNote?: Prisma.StringFieldUpdateOperationsInput | string
-  verificationStatus?: Prisma.StringFieldUpdateOperationsInput | string
   topicId?: Prisma.IntFieldUpdateOperationsInput | number
 }
 
@@ -893,7 +850,6 @@ export type OpinionSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs 
   ruling?: boolean
   reasoning?: boolean
   methodologyNote?: boolean
-  verificationStatus?: boolean
   topicId?: boolean
   scholarId?: boolean
   topic?: boolean | Prisma.TopicDefaultArgs<ExtArgs>
@@ -908,7 +864,6 @@ export type OpinionSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Exten
   ruling?: boolean
   reasoning?: boolean
   methodologyNote?: boolean
-  verificationStatus?: boolean
   topicId?: boolean
   scholarId?: boolean
   topic?: boolean | Prisma.TopicDefaultArgs<ExtArgs>
@@ -920,7 +875,6 @@ export type OpinionSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Exten
   ruling?: boolean
   reasoning?: boolean
   methodologyNote?: boolean
-  verificationStatus?: boolean
   topicId?: boolean
   scholarId?: boolean
   topic?: boolean | Prisma.TopicDefaultArgs<ExtArgs>
@@ -932,12 +886,11 @@ export type OpinionSelectScalar = {
   ruling?: boolean
   reasoning?: boolean
   methodologyNote?: boolean
-  verificationStatus?: boolean
   topicId?: boolean
   scholarId?: boolean
 }
 
-export type OpinionOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "ruling" | "reasoning" | "methodologyNote" | "verificationStatus" | "topicId" | "scholarId", ExtArgs["result"]["opinion"]>
+export type OpinionOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "ruling" | "reasoning" | "methodologyNote" | "topicId" | "scholarId", ExtArgs["result"]["opinion"]>
 export type OpinionInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   topic?: boolean | Prisma.TopicDefaultArgs<ExtArgs>
   scholar?: boolean | Prisma.ScholarDefaultArgs<ExtArgs>
@@ -967,7 +920,6 @@ export type $OpinionPayload<ExtArgs extends runtime.Types.Extensions.InternalArg
     ruling: string
     reasoning: string
     methodologyNote: string
-    verificationStatus: string
     topicId: number
     scholarId: number
   }, ExtArgs["result"]["opinion"]>
@@ -1401,7 +1353,6 @@ export interface OpinionFieldRefs {
   readonly ruling: Prisma.FieldRef<"Opinion", 'String'>
   readonly reasoning: Prisma.FieldRef<"Opinion", 'String'>
   readonly methodologyNote: Prisma.FieldRef<"Opinion", 'String'>
-  readonly verificationStatus: Prisma.FieldRef<"Opinion", 'String'>
   readonly topicId: Prisma.FieldRef<"Opinion", 'Int'>
   readonly scholarId: Prisma.FieldRef<"Opinion", 'Int'>
 }

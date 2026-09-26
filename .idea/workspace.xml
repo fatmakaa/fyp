@@ -5,31 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8fd0c15-984e-4b1c-aa71-4e6103bcfc61" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.agents/skills/prisma-composer/SKILL.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.claude/skills/prisma-composer/SKILL.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.cursor/skills/prisma-composer/SKILL.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.devin/skills/prisma-composer/SKILL.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fyp.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/admin/login/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin/login/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/admin/questions/QuestionActions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin/questions/QuestionActions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/admin/questions/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin/questions/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/admin/login/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/admin/login/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/questions/[id]/route.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/questions/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/questions/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/scholars/[id]/route.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/migrations/20260827200953_init/migration.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/migrations/20260827202037_init/migration.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/migrations/20260916151312_add_scholar_biography/migration.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/migrations/20260917151844_add_question_answer/migration.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seed.ts" beforeDir="false" afterPath="$PROJECT_DIR$/seed.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/api/topics/[id]/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/topics/[id]/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/topics/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/topics/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/scholars/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/scholars/[id]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/submit-question/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/submit-question/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/topics/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/topics/[id]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generated/prisma/internal/class.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/generated/prisma/internal/class.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generated/prisma/internal/prismaNamespace.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/generated/prisma/internal/prismaNamespace.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generated/prisma/internal/prismaNamespaceBrowser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/generated/prisma/internal/prismaNamespaceBrowser.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generated/prisma/models/Opinion.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/generated/prisma/models/Opinion.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +36,7 @@
   <component name="ProjectId" id="3IUrqt479KQmyc6Dc9jZveMHiIo" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
+    <option name="showScratchesAndConsoles" value="false" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
@@ -52,14 +44,32 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;fatma&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.scopes&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/app/topics/[id]" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="fyp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="fyp" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

@@ -28,5 +28,17 @@ export async function GET(
     );
   }
 
-  return Response.json(topic);
+  const opinions = topic.opinions.map((opinion) => ({
+    ...opinion,
+    verificationStatus:
+      opinion.sources.length > 0 &&
+      opinion.evidenceReferences.length > 0
+        ? "Verified"
+        : "Unverified",
+  }));
+
+  return Response.json({
+    ...topic,
+    opinions,
+  });
 }
