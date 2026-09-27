@@ -52,7 +52,7 @@ export default async function AdminPage() {
 
           {/* Topic Management */}
           <Link
-            href=""
+            href="/admin/topics"
             className="rounded-xl border bg-white p-6 shadow-sm transition hover:shadow-md"
           >
             <h2 className="text-xl font-semibold text-gray-900">
