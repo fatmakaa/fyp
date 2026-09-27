@@ -46,6 +46,8 @@ export default async function Home() {
         </div>
       </section>
 
+
+
       {/* How it works */}
       <section className="mx-auto max-w-5xl px-8 py-12">
         <h2 className="text-2xl font-semibold">
@@ -197,6 +199,12 @@ export default async function Home() {
         <div className="mx-auto max-w-5xl px-8 py-6 text-sm text-gray-500">
           Final Year Project — Islamic Legal Information System
         </div>
+
+        <Link  href="/page2" className="text-2xl font-semibold"  >
+        support
+
+        </Link>
+
       </footer>
 
     </main>

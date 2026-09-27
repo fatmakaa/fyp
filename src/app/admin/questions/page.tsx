@@ -2,6 +2,7 @@ import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import prisma from "@/lib/prisma";
 import QuestionActions from "./QuestionActions";
+import Link from "next/link";
 
 export default async function AdminQuestionsPage() {
   const cookieStore = await cookies();
@@ -20,6 +21,15 @@ export default async function AdminQuestionsPage() {
   return (
     <main className="min-h-screen bg-gray-50 p-8 text-gray-900">
       <div className="mx-auto max-w-5xl">
+
+
+       <Link
+                  href="/admin"
+                  className="text-sm font-medium text-gray-600 hover:text-gray-900"
+                >
+                  ← Back to Admin page
+                </Link>
+
 
         <h1 className="text-3xl font-bold">
           Submitted Questions

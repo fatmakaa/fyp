@@ -25,7 +25,7 @@ export default function AdminLoginPage() {
     });
 
     if (response.ok) {
-      router.push("/admin/questions");
+      router.push("/admin");
     } else {
       setError("Invalid username or password.");
     }
