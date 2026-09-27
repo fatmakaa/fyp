@@ -70,7 +70,7 @@ export default async function AdminPage() {
 
           {/* Scholar Management */}
           <Link
-            href=""
+            href="/admin/scholars"
             className="rounded-xl border bg-white p-6 shadow-sm transition hover:shadow-md"
           >
             <h2 className="text-xl font-semibold text-gray-900">
