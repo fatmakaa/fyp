@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8fd0c15-984e-4b1c-aa71-4e6103bcfc61" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/migrations/20260827200953_init/migration.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/migrations/20260827202037_init/migration.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/migrations/20260916151312_add_scholar_biography/migration.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/migrations/20260917151844_add_question_answer/migration.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seed.ts" beforeDir="false" afterPath="$PROJECT_DIR$/seed.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/topics/[id]/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/topics/[id]/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/scholars/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/scholars/[id]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generated/prisma/internal/class.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/generated/prisma/internal/class.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generated/prisma/internal/prismaNamespace.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/generated/prisma/internal/prismaNamespace.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generated/prisma/internal/prismaNamespaceBrowser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/generated/prisma/internal/prismaNamespaceBrowser.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generated/prisma/models/Opinion.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/generated/prisma/models/Opinion.ts" afterDir="false" />
-    </list>
+    <list default="true" id="d8fd0c15-984e-4b1c-aa71-4e6103bcfc61" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
