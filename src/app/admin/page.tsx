@@ -37,7 +37,7 @@ export default async function AdminPage() {
             className="rounded-xl border bg-white p-6 shadow-sm transition hover:shadow-md"
           >
             <h2 className="text-xl font-semibold text-gray-900">
-              Question Management
+             Submitted Questions Management
             </h2>
 
             <p className="mt-2 text-gray-600">
@@ -84,6 +84,23 @@ export default async function AdminPage() {
 
             <span className="mt-5 inline-block font-medium text-blue-600">
               Update Scholars →
+            </span>
+          </Link>
+          {/* Opinion Management */}
+          <Link
+            href="/admin/opinions"
+            className="rounded-xl border bg-white p-6 shadow-sm transition hover:shadow-md"
+          >
+            <h2 className="text-xl font-semibold text-gray-900">
+              Update Opinions
+            </h2>
+
+            <p className="mt-2 text-gray-600">
+              Add new legal opinions or update existing opinions in the system.
+            </p>
+
+            <span className="mt-5 inline-block font-medium text-blue-600">
+              Manage Opinions →
             </span>
           </Link>
 
