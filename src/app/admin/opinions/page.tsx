@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 type Topic = {
   id: number;
@@ -174,6 +175,12 @@ export default function AdminOpinionsPage() {
   return (
     <main className="min-h-screen bg-gray-50 px-6 py-12">
       <div className="mx-auto max-w-6xl">
+      <Link
+                        href="/admin"
+              className="mb-6 inline-block text-sm font-medium text-blue-600 hover:underline"
+                      >
+                        ← Back to Admin page
+                      </Link>
 
         <header className="mb-10">
           <h1 className="text-4xl font-bold text-gray-900">

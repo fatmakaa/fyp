@@ -25,7 +25,7 @@ export default async function AdminQuestionsPage() {
 
        <Link
                   href="/admin"
-                  className="text-sm font-medium text-gray-600 hover:text-gray-900"
+        className="mb-6 inline-block text-sm font-medium text-blue-600 hover:underline"
                 >
                   ← Back to Admin page
                 </Link>
