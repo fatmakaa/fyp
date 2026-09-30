@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
+
 type Scholar = {
   id: number;
   name: string;

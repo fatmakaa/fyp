@@ -26,15 +26,20 @@ export async function POST(request: Request) {
 
 // Public page retrieves approved questions
 export async function GET() {
-  const questions =
-    await prisma.submittedQuestion.findMany({
-      where: {
-        status: "Approved",
-      },
-      orderBy: {
-        createdAt: "desc",
-      },
-    });
+  const cookieStore = await cookies();
+  const session = cookieStore.get("admin_session");
+
+  const isAdmin =
+    session?.value === process.env.ADMIN_SESSION_TOKEN;
+
+  const questions = await prisma.submittedQuestion.findMany({
+    where: isAdmin
+      ? undefined
+      : { status: "Approved" },
+    orderBy: {
+      createdAt: "desc",
+    },
+  });
 
   return Response.json(questions);
 }
